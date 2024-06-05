@@ -207,3 +207,10 @@
 // < What is your age? 35
 // < You are old enough to legally drive.
 // ```
+// let age = Number(prompt('enter age'))
+// let legalAge = 16
+// if(Number(age) === legalAge ){
+//     console.log('You are old enough to legally drive.')
+// }else{
+//     console.log('You are not old enough to legally drive.')
+// }
