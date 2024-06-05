@@ -10,7 +10,7 @@
 
 // იხილეთ developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types ფაილის ტიპები სიისთვის.
 
-// შექმენით პროგრამა, რომელიც სთხოვს მომხმარებელს ფაილის სახელს და შემდეგ ბეჭდავს, იმ შემთხვევაში,
+// შექმენით პროგრამა, რომელიც სთხოვს მომხმარებელს ფაილის სახელ0ს და შემდეგ ბეჭდავს, იმ შემთხვევაში,
 // თუ ფაილის სახელი ამ რომელიმე სუფისქით მთავრდება:
 
 // * .gif
@@ -34,6 +34,21 @@
 // ```
 
 // * პროგრამისთვის დიდ თუ პატარა ასოებს მნიშვნელობა არ უნდა ჰქონდეს.
+// const fileName = prompt('enter image name')
+// if(fileName.endsWith('.gif') ){
+//     console.log('image/gif')
+// }else if(fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') ){
+//     console.log('image/jpg')
+// }else if(fileName.endsWith('.png') ){
+//     console.log('image/png')
+// }else if(fileName.endsWith('.pdf')){
+//     console.log('image/pdf')
+// }else if(fileName.endsWith('.txt')){
+//     console.log('image/txt')
+// }else if(fileName.endsWith('.zip')){
+//     console.log('image/zip')
+// }
+ 
 // ### პროექტი 29 - Math Interpreter - მათემატიკური ინტერპრეტატორი
 // შექმენით პროგრამა, რომელიც მომხმარებლისგან იღებსარითმეტიკულ გამოთვლას, რომელსაც შემდეგ ახორციელებს და 
 //შედეგს ათწილადის სახით ბეჭდავს. დაუშვით, რომ მომხმარებლის input დაფორმატებული იქნება, როგორც x y z,
@@ -56,7 +71,20 @@
 // ```
 
 // * პროგრამისთვის დიდ თუ პატარა ასოებს მნიშვნელობა არ უნდა ჰქონდეს.
-
+// let x = Number(prompt('enter the number'))
+// let y = prompt('enter the action')
+// let z = Number(prompt('enter the second number'))
+// if(y === '+'){
+//     console.log((x + z).toFixed(1))
+// }else if(y === '-'){
+//     console.log((x - z).toFixed(1))
+// }else if(y === '*'){
+//     console.log((x * z).toFixed(1))
+// }else if(y === '/'){
+//     console.log((x / z).toFixed(1))
+// }else{
+//     console.log('take valid symbol')
+// }
 // ### პროექტი 30 - Meal Time - კვების დრო
 // დავუშვათ, იმყოფებით ქვეყანაში, სადაც ჩვეულებრივ, საუზმეს 7:00-დან 8:00 საათამდე მიირთმევენ,
 // ლანჩს - 12:00-დან 13:00 საათამდე, ხოლო ვახშამს - 18:00-დან 19:00 საათამდე. იქნებ კარგი იყოს ისეთი 
@@ -86,6 +114,7 @@
 // < What time is it? 18:59
 // < Dinner time
 // ```
+
 // ### პროექტი 31 Adding Numbers
 // Write a program that prompts the user for five numbers and
 // computes the total of the numbers.
@@ -102,6 +131,12 @@
 // * he prompting must use repetition, such as a counted
 // loop, not three separate prompts.
 // * Create a flowchart before writing the program.
+// let total = 0
+// for(let i = 1;i <= 5;i++){
+//     const num = Number(prompt(`enter the number ${1}`))
+//     total += num
+// }
+// console.log(total)
 
 // ### პროექტი 32 - Tax Calculator - გადასახადის კალკულატორი
 // მარტივი პრობლემების გადასაჭრელად ყოველთვის ჩახლართული საკონტროლო სტრუქტურა არაა საჭირო. 
@@ -123,6 +158,16 @@
 // < What is the state? MN
 // < The total is $10.00
 // ```
+// const amount = Number(prompt('enter the amount'))
+// const state = prompt('enter the state')
+// let tax = 0
+// if(state === 'WI'){
+//     tax = 10 * 5.5 /100
+// }else {
+//     tax = 0
+// }
+// console.log(`subtotal is ${amount}, tax is${tax} the total is ${amount + tax} `)
+
 
 // ### პროექტი 33 - Password Validation - პაროლის ვალიდაცია
 // პაროლის ვალიდაცია ხდება მომხმარებლის მიერ მოწოდებული მნიშვნელობის შედარებით შენახულ მნიშვნელობასთან.
@@ -138,7 +183,14 @@
 // < What is the password? abc$123
 // < Welcome!
 // ```
-
+// let name = prompt('enter the name')
+// let password = prompt('enter the password')
+// let realPassword = 123
+// if(Number(password) === realPassword){
+//     console.log(`welcome ${name}`)
+// }else{
+//     console.log('invalid password')
+// }
 // ### პროექტი 34 - Legal Driving Age - მართვის კანონიერი ასაკი
 // თქვენ შეგიძლიათ შეამოწმოთ, თანაბარია თუ არა ორი რიცხვი, მაგრამ შეიძლება დაგჭირდეთ ასევე იმის გატესტვა,
 // როგორ დარდება input-ის რიცხვი ცნობილ მნიშვნელობას, ხოლო ამის მიხედვით აჩვენოთ შეტყობინება, მოცემული რიცხვი 
